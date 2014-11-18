@@ -1,6 +1,9 @@
 # James Node
 frontend/src/bower_components
 
+# JetBrains
+.idea
+
 # Logs
 logs
 *.log
