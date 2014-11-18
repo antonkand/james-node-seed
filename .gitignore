@@ -4,6 +4,9 @@ frontend/src/bower_components
 # JetBrains
 .idea
 
+# Compass
+.sass-cache
+
 # Logs
 logs
 *.log
