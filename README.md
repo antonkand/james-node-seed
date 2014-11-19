@@ -2,7 +2,7 @@ james-node-seed
 ===============
 > Node. James Node.
 
-### An opinionated seed for apps running
+### A quite un-opinionated seed for MEAN apps using Socket.io
 * [Jade](http://jade-lang.com/)
 * [AngularJS](https://angularjs.org/)
 * [Mongoose.js](http://mongoosejs.com)
