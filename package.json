@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/antonkand/james-node-seed.git"
+    "url": "https://github.com/antonkandersson/james-node-seed.git"
   },
   "keywords": [
     "seed",
@@ -22,9 +22,9 @@
   "author": "Anton K. Andersson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/antonkand/james-node-seed/issues"
+    "url": "https://github.com/antonkandersson/james-node-seed/issues"
   },
-  "homepage": "https://github.com/antonkand/james-node-seed",
+  "homepage": "https://github.com/antonkandersson/james-node-seed",
   "dependencies": {
     "chalk": "^0.5.1",
     "express": "^4.10.2",
