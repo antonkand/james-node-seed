@@ -25,7 +25,8 @@ var paths = {
     // add your angular scripts in the order you want them,
     // globbing isn't used, you need to be specific
     angular_src: ['./frontend/src/js/angular/example/ExampleModule.js'],
-    angular_bundle: './public/js'
+    script_dist: './public/js',
+    script_src: './frontend/src/js/vanilla/**/*.js'
 };
 
 // Tasks
@@ -55,7 +56,14 @@ gulp.task('angular', function () {
         .pipe(annotate())
         .pipe(concat('angularbundle.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.angular_bundle));
+        .pipe(gulp.dest(paths.script_dist));
+});
+
+gulp.task('scripts', function () {
+    return gulp.src(paths.script_src)
+        .pipe(concat('jsbundle.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.script_dist));
 });
 
 gulp.task('watch', function () {
@@ -63,6 +71,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.sass + '/*.scss', ['compass']);
     gulp.watch(paths.original_img + '/**/*.*', ['img']);
     gulp.watch(paths.angular_src, ['angular']);
+    gulp.watch(paths.script_src, ['scripts']);
 });
 
-gulp.task('default', ['compass', 'img', 'angular', 'watch']);
+gulp.task('default', ['compass', 'img', 'angular', 'scripts', 'watch']);
